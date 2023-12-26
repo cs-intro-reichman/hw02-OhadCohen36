@@ -4,9 +4,9 @@
 public class Perfect {
 	public static void main (String[] args) {
 		int num = Integer.parseInt(args[0]);
-		int sum = 0;
+		int sum = 1;
 		String perfect = num + " is a perfect number since " + num + " = 1";
-		for(int i = 1; i < num; i++ )
+		for(int i = 2; i < num; i++ )
 		{
 			if(num%i == 0)
 			{
