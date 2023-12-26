@@ -4,7 +4,7 @@
  */
 public class Reverse {
 	public static void main (String[] args){
-		string rev = string.parseStr(args[0]);
+		string rev = args[0];
 		for(int i = rev.length() - 1; i >= 0; i--)
 		{
 			System.out.println(rev.charAt(i));
