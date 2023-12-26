@@ -9,11 +9,6 @@ public class Reverse {
 			System.out.print(rev.charAt(i));
 		}
 		System.out.println();
-		if(rev.length()%2 == 0){
-			System.out.println("The middle character is " + rev.charAt((rev.length()/2) + 1));
-		}
-		else{
-			System.out.println("The middle character is " + rev.charAt(rev.length()/2));
-		}
+		System.out.println("The middle character is " + rev.charAt((rev.length()/2)));
 	}
 }
