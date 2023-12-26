@@ -5,11 +5,11 @@
 public class InOrder {
 	public static void main (String[] args) {
 		double frstRand = Math.random()*10;
-		system.out.print((int)(frstRand) + " ");
+		System.out.print((int)(frstRand) + " ");
 		double rand = Math.random()*10;
 		while(frstRand <= rand)
 		{
-			system.out.print((int)(rand) + " ");
+			System.out.print((int)(rand) + " ");
 			rand = Math.random()*10;
 		}
 	
