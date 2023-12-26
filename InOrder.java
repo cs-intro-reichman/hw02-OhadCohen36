@@ -7,12 +7,11 @@ public class InOrder {
 		double lowRand = (Math.random()*10);
 		System.out.print((int)(lowRand) + " ");
 		double newRand = (Math.random()*10);
-		while(lowRand <= newRand);
-		{
+		do {
 			System.out.print((int)(newRand) + " ");
 			lowRand = newRand;
 			newRand = (Math.random()*10);
-		}
+		}while(lowRand <= newRand);
 	
 	}
 }
