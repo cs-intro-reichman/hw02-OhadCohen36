@@ -7,7 +7,7 @@ public class InOrder {
 		double frstRand = Math.random()*10;
 		System.out.print((int)(frstRand) + " ");
 		double rand = Math.random()*10;
-		while(frstRand <= rand)
+		while(frstRand <= rand);
 		{
 			System.out.print((int)(rand) + " ");
 			rand = Math.random()*10;
