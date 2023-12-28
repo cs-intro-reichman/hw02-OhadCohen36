@@ -13,7 +13,7 @@ public class OneOfEachStats {
 		int seed = Integer.parseInt(args[1]);
         Random generator = new Random(seed);  
 		int count = 0;
-		double average = 0;
+		double average = 1;
 		int twoChild = 0;
 		int threeChild = 0;
 		int fourplusChild = 0;
@@ -22,10 +22,10 @@ public class OneOfEachStats {
 		{
 			rand = generator.nextDouble();
 			count = 1;
-			if(rand <= 0.5)
+			if(rand < 0.5)
 			{
 				rand = generator.nextDouble();
-				while(rand <= 0.5)
+				while(rand < 0.5)
 				{
 					rand = generator.nextDouble();
 					count = count + 1;
@@ -35,7 +35,7 @@ public class OneOfEachStats {
 			else
 			{
 				rand = generator.nextDouble();
-				while(rand >= 0.5)
+				while(rand > 0.5)
 				{
 					rand = generator.nextDouble();
 					count = count + 1;
