@@ -14,7 +14,7 @@ public class OneOfEachStats {
         Random generator = new Random(seed);  
 		boolean Girl = false;
 		boolean Boy = false;
-		double average = 0;
+		double average = 0.0;
 		int twoChild = 0;
 		int threeChild = 0;
 		int fourplusChild = 0;

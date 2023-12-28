@@ -9,7 +9,7 @@ public class OneOfEachStats1 {
 		int numOffamilies = Integer.parseInt(args[0]);
 		boolean Girl = false;
 		boolean Boy = false;
-		double average = 0;
+		double average = 0.0;
 		int twoChild = 0;
 		int threeChild = 0;
 		int fourplusChild = 0;
@@ -37,7 +37,8 @@ public class OneOfEachStats1 {
 			Girl = false;
 			count = 0;
 		}
-		System.out.println("Average: " + average/numOffamilies + " children to get at least one of each gender.");
+		average = average/numOffamilies;
+		System.out.println("Average: " + average + " children to get at least one of each gender.");
 		System.out.println("Number of families with 2 children: " + twoChild);
 		System.out.println("Number of families with 3 children: " + threeChild);
 		System.out.println("Number of families with 4 children: " + fourplusChild);
