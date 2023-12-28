@@ -12,61 +12,45 @@ public class OneOfEachStats {
 		int numOffamilies = Integer.parseInt(args[0]);
 		int seed = Integer.parseInt(args[1]);
         Random generator = new Random(seed);  
-		int count = 0;
-		double average = 1;
+		boolean Girl = false;
+		boolean Boy = false;
+		double average = 0;
 		int twoChild = 0;
 		int threeChild = 0;
 		int fourplusChild = 0;
-		double rand = generator.nextDouble();
+		int count = 0;
 		for(int i = 1; i <= numOffamilies; i++)
 		{
-			rand = generator.nextDouble();
-			count = 1;
-			if(rand < 0.5)
-			{
-				rand = generator.nextDouble();
-				while(rand < 0.5)
-				{
-					rand = generator.nextDouble();
-					count = count + 1;
+			while((Boy != true) || (Girl != true)){
+				if(Math.random() < 0.5){
+					Girl = true;
+					count++;
 				}
-				count = count + 1;
-			}
-			else
-			{
-				rand = generator.nextDouble();
-				while(rand > 0.5)
-				{
-					rand = generator.nextDouble();
-					count = count + 1;
+				else{
+					Boy = true;
+					count++;
 				}
-				count = count + 1;
 			}
-			if(count == 2)
-				twoChild = twoChild + 1;
-			if(count == 3)
-				threeChild = threeChild + 1;
-			if(count >= 4)
-				fourplusChild = fourplusChild + 1;
 			average = average + count;
+			if(count == 2){
+				twoChild++;}
+			if(count == 3){
+				threeChild++;}
+			if(count >= 4){
+				fourplusChild++;}
+			Boy = false;
+			Girl = false;
+			count = 0;
 		}
-		String common;
-		if(twoChild > threeChild){
-			if(twoChild > fourplusChild){
-				common = "2.";}
-			else{
-			common = "4 or more.";}
-		}
-		else{
-			if(threeChild > fourplusChild){
-				common = "3.";}
-			else{
-				common = "4 or more.";}
-			}
 		System.out.println("Average: " + average/numOffamilies + " children to get at least one of each gender.");
 		System.out.println("Number of families with 2 children: " + twoChild);
 		System.out.println("Number of families with 3 children: " + threeChild);
 		System.out.println("Number of families with 4 children: " + fourplusChild);
-		System.out.println("The most common number of children is " + common);   
+		if((twoChild >= threeChild) && (twoChild >= fourplusChild))
+				System.out.println("The most common number of children is 2.");
+		if((threeChild > twoChild) && (threeChild > fourplusChild))
+				System.out.println("The most common number of children is 3.");
+		if((fourplusChild > twoChild) && (fourplusChild > threeChild))
+				System.out.println("The most common number of children is 4 or more.");
 	}
 }
