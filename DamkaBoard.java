@@ -4,7 +4,7 @@
 public class DamkaBoard {
 	public static void main(String[] args) {
 		int num = Integer.parseInt(args[0]);
-		for(int i = 1; i <= num; i++)
+		for(int i = 1; i <= num; i++) // TODO: instead of i and j, better naming would be row and col
 		{
 			for(int j = 1; j <= num; j++)
 			{

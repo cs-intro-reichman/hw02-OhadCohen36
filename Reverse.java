@@ -5,10 +5,12 @@
 public class Reverse {
 	public static void main (String[] args){
 		String rev = args[0];
+		// TODO: add empty line here
 		for(int i = (rev.length() - 1); i >= 0; i--){
 			System.out.print(rev.charAt(i));
 		}
 		System.out.println();
+		// TODO: add empty line here
 		if(rev.length()%2 == 0){
 			System.out.println("The middle character is " + rev.charAt((rev.length()/2) - 1));
 		}
