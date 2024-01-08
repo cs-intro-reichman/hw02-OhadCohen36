@@ -21,6 +21,8 @@ public class OneOfEachStats {
 		double avg = 0;
 		double rand = 0;
 		for(int i = 1; i <= num; i++){
+			// TODO: if you use variables boy girl and count only in this scope - declare it inside this scope
+			//       close to the place it used
 			while((boy != true) || (girl != true)){
 				if(generator.nextDouble() < 0.5){
 					count++;

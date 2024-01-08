@@ -6,6 +6,7 @@ public class Perfect {
 		int num = Integer.parseInt(args[0]);
 		int sum = 1;
 		String perfect = num + " is a perfect number since " + num + " = 1";
+		// TODO: added empty line here
 		for(int i = 2; i < num; i++ )
 		{
 			if(num%i == 0)
@@ -14,6 +15,7 @@ public class Perfect {
 				perfect = perfect + " + " + i;
 			}
 		}
+		// TODO: added empty line here
 		if (sum == num)
 			System.out.println(perfect);
 		else

@@ -6,7 +6,7 @@ public class InOrder {
 	public static void main (String[] args) {
 		double lowRand = (Math.random()*10);
 		System.out.print((int)(lowRand) + " ");
-		double newRand = (Math.random()*10);
+		double newRand = (Math.random()*10); // TODO: put empty line after this line for breathing...it's more readable
 		while(lowRand <= newRand) {
 			System.out.print((int)(newRand) + " ");
 			lowRand = newRand;
